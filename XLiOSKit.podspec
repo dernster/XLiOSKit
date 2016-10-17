@@ -2,6 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = "XLiOSKit"
   s.version      = "0.8.0"
+  s.source       = { git: "https://github.com/dernster/XLiOSKit.git", tag: "" }
   s.license      = {
     :type => 'Copyright',
     :text => <<-LICENSE
@@ -16,7 +17,7 @@ Pod::Spec.new do |s|
   s.author       = { 'Martin Barreto' => 'martin@xmartlabs.com', 'Miguel Revetria' => 'miguel@xmartlabs.com' }
 
   s.platform     = :ios
-  
+
   s.subspec 'arc' do |sp|
     sp.source_files = 'XLiOSKit/**/*.{m,h}'
     sp.requires_arc = true
@@ -27,7 +28,7 @@ Pod::Spec.new do |s|
     sp.requires_arc = false
     sp.compiler_flags = '-fno-objc-arc'
   end
-  
+
   s.header_dir = 'XLKit'
   s.requires_arc = true
   s.ios.deployment_target = '7.0'
